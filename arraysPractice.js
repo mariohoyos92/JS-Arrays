@@ -80,7 +80,19 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 
 
-  //Code Here
+ const divider = (numbersArray) => {
+   let evensArray = [];
+   let oddsArray = [];
+   let combinedArray = [];
+
+   for(let i = 0; i < numbersArray.length; i++){
+     numbersArray[i] % 2 === 0 ? evensArray.push(numbersArray[i]) : oddsArray.push(numbersArray[i]);
+     }
+   
+
+   combinedArray.push(evensArray, oddsArray);
+   return combinedArray;
+ }
 
 
 //Next Problem
@@ -94,7 +106,15 @@ var getRandomArbitrary = function() {
 
 // Your job is to write a function named finder that will get a random number (by invoking getRandomArbitrary), then loop through the array (that will be passed in as a parameter) to see if that random number is in the array. If it is, return true, if it's not, return false
 
-  //Code Here
+  const finder = (arr)=> {
+    let randomNum = getRandomArbitrary()
+    for(let i = 0; i < arr.length ; i++){
+      if(randomNum === arr[i]){
+        return true;
+      }
+    }
+    return false;
+  }
 
 
 
